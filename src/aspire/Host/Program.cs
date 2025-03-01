@@ -10,7 +10,7 @@ builder.AddContainer("prometheus", "prom/prometheus")
        .WithHttpEndpoint(port: 9090, targetPort: 9090);
 
 var username = builder.AddParameter("pg-username", "admin");
-var password = builder.AddParameter("pg-password", "admin");
+var password = builder.AddParameter("pg-password", "admin123");
 
 var database = builder.AddPostgres("db", username, password, port: 5432)
     .WithDataVolume()
